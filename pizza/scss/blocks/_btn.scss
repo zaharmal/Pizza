@@ -1,0 +1,104 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid $safety-orange;
+  color: $safety-orange;
+  font-family: $ff-main;
+  line-height: 22px;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &__user {
+    padding: 13px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 110px;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    width: 50px;
+  }
+
+  &__drop {
+    font-family: $ff-main;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $white;
+      color: $safety-orange;
+      outline: none;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: transparent;
+    padding: 16px 22px;
+    border-radius: 15px;
+    border: none;
+    width: 240px;
+  }
+
+  &__filter-text {
+    font-family: $ff-main;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $nero;
+    cursor: pointer;
+  }
+
+  &__filter-decor {
+    color: $safety-orange;
+  }
+
+  &__filter-pizza {
+    font-family: $ff-main;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0;
+    border: none;
+    color: $safety-orange;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0 0;
+  }
+
+  &__apply {
+    background-color: $safety-orange;
+    color: $white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 13px;
+    width: 244px;
+    border-radius: 18px;
+  }
+}

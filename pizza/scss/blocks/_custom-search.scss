@@ -1,0 +1,24 @@
+.custom-search {
+  position: relative;
+  margin: 0 62px 0 39px;
+
+  &__field {
+    font-family: $ff-main;
+    color: $black;
+    font-size: 16px;
+    line-height: 22px;
+    width: 768px;
+    background-color: $snow;
+    padding: 14px 20px 14px 48px;
+    border: none;
+    border-radius: 15px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $grey;
+  }
+}

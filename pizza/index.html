@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Next Pizza</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <svg class="header__logo-icon" width="202" height="51">
+              <use xlink:href="images/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <form class="header__form">
+            <div class="custom-search">
+              <input class="custom-search__field" type="search" aria-label="Поле поиска" name="search-field"
+                placeholder="Поиск пиццы..." autocomplete="off">
+              <svg class="custom-search__icon" width="16" height="16">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </div>
+          </form>
+          <div class="header__btns">
+            <button class="btn btn__user" type="button">
+              <svg class="btn__user-icon" width="11" height="13">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+              <span class="btn__user-text">Войти</span>
+            </button>
+            <button class="btn btn__cart" type="button">
+              <svg class="btn__user-icon" width="16" height="16">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="product">
+        <div class="container">
+          <h1 class="product__title">Все пиццы</h1>
+          <div class="product__top">
+            <form class="product__form-top">
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-all" type="radio" name="type" value="all"
+                  checked>
+                <label class="custom-radio__label" for="radio-all">Все</label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-meat" type="radio" name="type"
+                  value="meat">
+                <label class="custom-radio__label" for="radio-meat">Мясные</label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-hot" type="radio" name="type" value="hot">
+                <label class="custom-radio__label" for="radio-hot">Острые</label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-sweet" type="radio" name="type"
+                  value="sweet">
+                <label class="custom-radio__label" for="radio-sweet">Сладкие</label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-vegan" type="radio" name="type"
+                  value="vegan">
+                <label class="custom-radio__label" for="radio-vegan">Вегетарианские</label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-chicken" type="radio" name="type"
+                  value="chicken">
+                <label class="custom-radio__label" for="radio-chicken">С курицей</label>
+              </div>
+              <button class="btn__drop" type="button">
+                <span class="btn__drop-text">Ещё</span>
+                <svg class="btn__drop-icon" width="6" height="10">
+                  <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+            </form>
+            <button class="btn__filter" type="button">
+              <svg class="btn__filter-icon" width="16" height="14">
+                <use xlink:href="images/sprite.svg#icon-filter"></use>
+              </svg>
+              <span class="btn__filter-text">
+                Сортировка:
+                <span class="btn__filter-decor">рейтингу</span>
+              </span>
+            </button>
+          </div>
+          <div class="product__inner">
+            <form class="product__form-filter">
+              <legend class="product__form-title">Фильтрация</legend>
+              <fieldset class="product__form-group product__form-group--pizza">
+                <div class="product__form-wrapper">
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="custom-pizza" type="checkbox" value="custom-pizza">
+                    <label class="custom-checkbox__label" for="custom-pizza">Можно собирать</label>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="new-pizza" type="checkbox" value="new-pizza">
+                    <label class="custom-checkbox__label" for="new-pizza">Можно собирать</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="product__form-group product__form-group--price">
+                <legend class="product__form-name">Цена от и до:</legend>
+                <div class="product__form-wrapper product__form-wrapper--price">
+                  <div class="custom-input">
+                    <input class="custom-input__field" id="min-price" type="text" value="0">
+                    <svg class="custom-input__icon" width="9" height="19">
+                      <use xlink:href="images/sprite.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="custom-input">
+                    <input class="custom-input__field" id="max-price" type="text" value="1950">
+                    <svg class="custom-input__icon" width="9" height="19">
+                      <use xlink:href="images/sprite.svg#icon-ruble"></use>
+                    </svg>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="product__form-group product__form-group--ingredients">
+                <legend class="product__form-name">Ингредиенты:</legend>
+                <div class="product__form-wrapper">
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="cheas-souse" type="checkbox" value="cheas-souse">
+                    <label class="custom-checkbox__label" for="cheas-souse">Сырный соус</label>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="mozzarella" type="checkbox" value="mozzarella">
+                    <label class="custom-checkbox__label" for="mozzarella">Моцарелла</label>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="garlic" type="checkbox" value="garlic">
+                    <label class="custom-checkbox__label" for="garlic">Чеснок</label>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="pickles" type="checkbox" value="pickles">
+                    <label class="custom-checkbox__label" for="pickles">Солённые огурчики</label>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="onion" type="checkbox" value="onion">
+                    <label class="custom-checkbox__label" for="onion">Красный лук</label>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input class="custom-checkbox__field visually-hidden" id="tomatoes" type="checkbox" value="tomatoes">
+                    <label class="custom-checkbox__label" for="tomatoes">Томаты</label>
+                  </div>
+                  <button class="btn__filter-pizza" type="button">
+                    + Показать всё
+                  </button>
+                </div>
+              </fieldset>
+              <fieldset class="product__form-group product__form-group--thin">
+                <legend class="product__form-name">Тип теста:</legend>
+                <div class="product__form-wrapper">
+                  <div class="custom-radio custom-radio--filter">
+                    <input class="custom-radio__field visually-hidden" id="traditional" type="radio" name="dough"
+                      value="traditional" checked>
+                    <label class="custom-radio__label custom-radio__label--filter" for="traditional">Традиционное</label>
+                  </div>
+                  <div class="custom-radio custom-radio--filter">
+                    <input class="custom-radio__field visually-hidden" id="thin" type="radio" name="dough" value="thin">
+                    <label class="custom-radio__label custom-radio__label--filter" for="thin">Тонкое</label>
+                  </div>
+                </div>
+              </fieldset>
+              <button class="btn btn__apply" type="button">Применить</button>
+            </form>
+            <div class="product__wrapper">
+              <ul class="product__list">
+                <li class="product__list-item">
+                  <div class="product-cart">
+                    <img class="product-cart__img" src="images/products/diablo.jpg" alt="Картинка пиццы" width="285" height="260">
+                    <h2 class="product-cart__title">Сырный цыпленок</h2>
+                    <p class="product-cart__text">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</p>
+                    <div class="product-cart__bottom">
+                      <p class="product-cart__price">
+                        от
+                        <span class="product-cart__price-num">
+                          395 ₽
+                        </span>
+                      </p>
+                      <button class="product-cart__btn" type="button">
+                        <svg class="product-cart__btn-icon" width="13" height="12">
+                          <use xlink:href="images/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span class="product-cart__btn-text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="product__list-item">
+                  <div class="product-cart">
+                    <img class="product-cart__img" src="images/products/diablo.jpg" alt="Картинка пиццы" width="285" height="260">
+                    <h2 class="product-cart__title">Сырный цыпленок</h2>
+                    <p class="product-cart__text">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</p>
+                    <div class="product-cart__bottom">
+                      <p class="product-cart__price">
+                        от
+                        <span class="product-cart__price-num">
+                          395 ₽
+                        </span>
+                      </p>
+                      <button class="product-cart__btn" type="button">
+                        <svg class="product-cart__btn-icon" width="13" height="12">
+                          <use xlink:href="images/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span class="product-cart__btn-text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="product__list-item">
+                  <div class="product-cart">
+                    <img class="product-cart__img" src="images/products/diablo.jpg" alt="Картинка пиццы" width="285" height="260">
+                    <h2 class="product-cart__title">Сырный цыпленок</h2>
+                    <p class="product-cart__text">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</p>
+                    <div class="product-cart__bottom">
+                      <p class="product-cart__price">
+                        от
+                        <span class="product-cart__price-num">
+                          395 ₽
+                        </span>
+                      </p>
+                      <button class="product-cart__btn" type="button">
+                        <svg class="product-cart__btn-icon" width="13" height="12">
+                          <use xlink:href="images/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span class="product-cart__btn-text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="product__list-item">
+                  <div class="product-cart">
+                    <img class="product-cart__img" src="images/products/diablo.jpg" alt="Картинка пиццы" width="285" height="260">
+                    <h2 class="product-cart__title">Сырный цыпленок</h2>
+                    <p class="product-cart__text">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</p>
+                    <div class="product-cart__bottom">
+                      <p class="product-cart__price">
+                        от
+                        <span class="product-cart__price-num">
+                          395 ₽
+                        </span>
+                      </p>
+                      <button class="product-cart__btn" type="button">
+                        <svg class="product-cart__btn-icon" width="13" height="12">
+                          <use xlink:href="images/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span class="product-cart__btn-text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="product__list-item">
+                  <div class="product-cart">
+                    <img class="product-cart__img" src="images/products/diablo.jpg" alt="Картинка пиццы" width="285" height="260">
+                    <h2 class="product-cart__title">Сырный цыпленок</h2>
+                    <p class="product-cart__text">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</p>
+                    <div class="product-cart__bottom">
+                      <p class="product-cart__price">
+                        от
+                        <span class="product-cart__price-num">
+                          395 ₽
+                        </span>
+                      </p>
+                      <button class="product-cart__btn" type="button">
+                        <svg class="product-cart__btn-icon" width="13" height="12">
+                          <use xlink:href="images/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span class="product-cart__btn-text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="product__list-item">
+                  <div class="product-cart">
+                    <img class="product-cart__img" src="images/products/diablo.jpg" alt="Картинка пиццы" width="285" height="260">
+                    <h2 class="product-cart__title">Сырный цыпленок</h2>
+                    <p class="product-cart__text">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, соус альфредо, чеснок</p>
+                    <div class="product-cart__bottom">
+                      <p class="product-cart__price">
+                        от
+                        <span class="product-cart__price-num">
+                          395 ₽
+                        </span>
+                      </p>
+                      <button class="product-cart__btn" type="button">
+                        <svg class="product-cart__btn-icon" width="13" height="12">
+                          <use xlink:href="images/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span class="product-cart__btn-text">Добавить</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="pagination">
+        <div class="container">
+          <div class="pagination__inner">
+            <button class="pagination__btn pagination__btn--prev" type="button" disabled>
+              <svg class="pagination__btn-icon" width="7" height="12">
+                <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+            <button class="pagination__btn pagination__btn--active" type="button">1</button>
+            <button class="pagination__btn" type="button">2</button>
+            <button class="pagination__btn" type="button">3</button>
+            <button class="pagination__btn pagination__btn--next" type="button">
+              <svg class="pagination__btn-icon" width="7" height="12">
+                <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

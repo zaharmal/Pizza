@@ -1,0 +1,41 @@
+.custom-checkbox {
+  &__field {
+    &:checked ~ .custom-checkbox__label {
+      &::before {
+        background-color: $safety-orange;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/icons/icon-check.svg");
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 9px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    padding-left: 38px;
+    user-select: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-color: $silver;
+      border-radius: 8px;
+    }
+  }
+}

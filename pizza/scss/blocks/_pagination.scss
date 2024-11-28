@@ -1,0 +1,41 @@
+.pagination {
+  padding: 0 0 60px;
+  &__inner {
+    margin-left: 311px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: 1px solid $safety-orange;
+    border-radius: 15px;
+    padding: 16px;
+    width: 45px;
+    height: 45px;
+    color: $grey;
+    cursor: pointer;
+
+    &--active {
+      background-color: $safety-orange;
+      color: $white;
+    }
+
+    &--prev {
+      color: $safety-orange;
+      .pagination__btn-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    &--next {
+      color: $safety-orange;
+      .pagination__btn-icon {
+        transform: rotate(270deg);
+      }
+    }
+
+    &:disabled {
+      border-color: $snow;
+      color: $snow;
+    }
+  }
+}

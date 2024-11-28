@@ -1,0 +1,15 @@
+.header {
+  padding: 44px 0 37px 0;
+  border-bottom: 1px solid $snow;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
