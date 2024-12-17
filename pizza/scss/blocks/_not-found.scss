@@ -1,0 +1,55 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  gap: 82px;
+  width: 867px;
+  margin: 0 auto;
+  padding: 202px 0 285px;
+
+  &__title {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 54px;
+    letter-spacing: -0.03em;
+    margin: 0 0 10px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.03em;
+    color: $grey;
+    margin: 0 0 45px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__btn {
+    width: 130px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+
+    &--back {
+      width: 158px;
+    }
+
+    &--reboot {
+      color: $grey;
+      border-color: $grey;
+    }
+  }
+
+  &__img {
+    width: 340px;
+    height: 346px;
+  }
+}

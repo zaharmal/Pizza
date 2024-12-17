@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страницы не существует</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <svg class="header__logo-icon" width="202" height="51">
+              <use xlink:href="images/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <form class="header__form">
+            <div class="custom-search">
+              <input class="custom-search__field" type="search" aria-label="Поле поиска" name="search-field"
+                placeholder="Поиск пиццы..." autocomplete="off">
+              <svg class="custom-search__icon" width="16" height="16">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </div>
+          </form>
+          <div class="header__btns">
+            <button class="btn btn__user" type="button">
+              <svg class="btn__user-icon" width="11" height="13">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+              <span class="btn__user-text">Войти</span>
+            </button>
+            <button class="btn btn__cart" type="button">
+              <svg class="btn__user-icon" width="16" height="16">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="not-found">
+        <div class="not-found__wrapper">
+          <h1 class="not-found__title">Страница не&nbsp;найдена</h1>
+          <p class="not-found__text">Проверьте корректность введённого адреса или повторите попытку позже</p>
+          <div class="not-found__btns">
+            <button class="btn not-found__btn not-found__btn--back" type="button">
+              <svg class="not-found__btn-icon" width="14" height="12">
+                <use xlink:href="images/sprite.svg#icon-arrow-back"></use>
+              </svg>
+              <span class="not-found__btn-text">На главную</span>
+            </button>
+            <button class="btn not-found__btn not-found__btn--reboot" type="button">Обновить</button>
+          </div>
+        </div>
+        <img class="not-found__img" src="images/404/404.png" alt="Страница не найдена" width="340" height="346">
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
