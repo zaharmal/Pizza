@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Доступ запрещен</title>
+</head>
+<body>
+  
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <svg class="header__logo-icon" width="202" height="51">
+              <use xlink:href="images/sprite.svg#header-logo"></use>
+            </svg>
+          </a>
+          <form class="header__form">
+            <div class="custom-search">
+              <input class="custom-search__field" type="search" name="header-search" placeholder="Поиск пиццы..."
+                autocomplete="off">
+              <svg class="custom-search__icon" width="16" height="16">
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </div>
+          </form>
+          <div class="header__btns">
+            <button class="btn header__btn" type="button">
+              <svg class="header__btn-icon" width="11" height="13">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+              <span class="header__btn-text">Войти</span>
+            </button>
+            <button class="btn header__btn" type="button">
+              <svg class="header__btn-icon" width="16" height="16">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="not-found">
+        <div class="container">
+          <div class="not-found__inner">
+            <div class="not-found__descr">
+              <h1 class="not-found__title">Доступ запрещён</h1>
+              <p class="not-found__text">Данную страницу могут просматривать только авторизованные пользователи</p>
+              <div class="not-found__btns">
+                <a class="btn not-found__btn" href="index.html">
+                  <svg class="not-found__btn-icon" width="14" height="12">
+                    <use xlink:href="images/sprite.svg#icon-back"></use>
+                  </svg>
+                  <span class="not-found__btn-text">На главную</span>
+                </a>
+                <button class="btn not-found__btn" type="button">Обновить</button>
+              </div>
+            </div>
+            <img class="not-found__img not-found__img--denied" src="images/not-found/denied.png" alt="Картинка" width="320" height="379">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

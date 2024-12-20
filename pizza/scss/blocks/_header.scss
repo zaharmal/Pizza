@@ -1,15 +1,41 @@
 .header {
-  padding: 44px 0 37px 0;
-  border-bottom: 1px solid $snow;
+  padding: 45px 0 41px;
+  border-bottom: 1px solid $whisper;
 
   &__inner {
     display: flex;
     align-items: center;
   }
 
+  &__form {
+    margin: 0 66px 0 40px;
+  }
+
   &__btns {
     display: flex;
     align-items: center;
     gap: 15px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    &:hover {
+      background-color: $safety-orange;
+      color: $white;
+    }
+
+    &:first-child {
+      padding: 13px;
+      width: 110px;
+    }
+
+    &:last-child {
+      padding: 16px;
+      width: 50px;
+    }
   }
 }

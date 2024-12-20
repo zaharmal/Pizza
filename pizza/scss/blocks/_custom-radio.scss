@@ -1,57 +1,68 @@
 .custom-radio {
-  &__field {
-    &:checked ~ .custom-radio__label:not(.custom-radio__label--filter) {
-      background-color: $white;
-      color: $safety-orange;
-      border-radius: 15px;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-    }
+  padding: 10px 0;
 
-    &:checked ~ .custom-radio__label--filter::after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      left: 7px;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: $white;
-      border-radius: 50%;
-    }
+  &__field:checked ~ .custom-radio__label {
+    color: $safety-orange;
+    background-color: $white;
+    border-radius: 15px;
   }
 
   &__label {
-    padding: 10px 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    user-select: none;
-    transition: color .3s;
+    color: $nero;
     cursor: pointer;
+    padding: 10px 16px;
+    user-select: none;
+  }
+}
 
-    &:hover:not(.custom-radio__label--filter) {
-      color: $safety-orange;
-    }
+.custom-radio--filter {
+  padding: 0;
+}
 
-    &--filter {
-      padding: 0;
-      font-weight: 400;
-      background-color: transparent;
-      transition: none;
-      position: relative;
-      padding-left: 36px;
+.custom-radio--filter .custom-radio__field:checked ~ .custom-radio__label {
+  color: $black;
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        background-color: $safety-orange;
-        border-radius: 50%;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
+  &::before {
+    background-color: $safety-orange;
+  }
+
+  &::after {
+    display: block;
+  }
+}
+
+.custom-radio--filter  .custom-radio__label {
+  padding: 0;
+  color: $black;
+  font-weight: 400;
+  position: relative;
+  padding: 0 0 0 36px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $white-smoke;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
   }
 }

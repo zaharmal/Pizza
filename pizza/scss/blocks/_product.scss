@@ -1,91 +1,73 @@
 .product {
-  padding: 40px 0 70px;
+  padding: 40px 0 0;
 
   &__title {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     font-weight: 800;
     font-size: 36px;
-    line-height: 39px;
+    line-height: 49px;
   }
 
-  &__top {
+  &__type {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 36px 0;
   }
 
-  &__form-top {
-    padding: 6px;
-    background-color: $snow;
+  &__type-wrapper {
     display: flex;
     align-items: center;
-    gap: 7px;
+    background-color: $snow2;
+    padding: 6px 30px 7px 5px;
     border-radius: 15px;
-    height: 55px;
+    gap: 7px;
+    width: 775px;
   }
 
-  &__inner {
-    display: flex;
-    gap: 48px;
-  }
-
-  &__form-filter {
-    width: 244px;
-  }
-
-  &__form-title {
-    margin: 0 0 30px 0;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  &__form-group {
-    padding: 0;
+  &__rate-btn {
     border: none;
-    margin: 0;
-
-    &--pizza {
-      margin-bottom: 51px;
-    }
-
-    &--price {
-      margin-bottom: 62px;
-    }
-
-    &--ingredients {
-      margin-bottom: 42px;
-    }
-
-    &--thin {
-      margin-bottom: 34px;
-    }
-  }
-
-  &__form-wrapper {
+    background-color: $snow2;
+    border-radius: 15px;
+    padding: 16px;
+    width: 240px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    &--price {
-      flex-direction: row;
-    }
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
-  &__form-name {
-    font-weight: 700;
+  &__rate-icon {
+    color: $black;
+  }
+
+  &__rate-text {
+    color: $nero;
+    font-family: $ff-main;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    margin: 0 0 15px 0;
+  }
+
+  &__rate-decor {
+    color: $safety-orange;
+  }
+
+  &__wrapper {
+    margin: 36px 0 0;
+    display: flex;
+    gap: 45px;
   }
 
   &__list {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 30px 0 70px;
     display: flex;
-    flex-wrap: wrap;
     gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    width: 285px;
   }
 }

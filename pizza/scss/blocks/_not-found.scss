@@ -1,55 +1,62 @@
 .not-found {
-  display: flex;
-  align-items: center;
-  gap: 82px;
-  width: 867px;
-  margin: 0 auto;
-  padding: 202px 0 285px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    max-width: 877px;
+    margin: 202px auto 285px;
+  }
+
+  &__descr {
+    width: 465px;
+  }
 
   &__title {
     font-weight: 800;
-    font-size: 35px;
-    line-height: 54px;
+    font-size: 40px;
+    line-height: 55px;
     letter-spacing: -0.03em;
     margin: 0 0 10px;
+    color: $black;
   }
 
   &__text {
     font-size: 20px;
     line-height: 28px;
-    letter-spacing: -0.03em;
-    color: $grey;
+    color: $nobel;
     margin: 0 0 45px;
   }
 
   &__btns {
     display: flex;
+    align-items: center;
     gap: 20px;
   }
 
   &__btn {
-    width: 130px;
     padding: 13px;
+    width: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
+    border-color: $silver;
+    color: $silver;
 
-    &--back {
+    &:first-child {
       width: 158px;
-    }
-
-    &--reboot {
-      color: $grey;
-      border-color: $grey;
+      border-color: $safety-orange;
+      color: $safety-orange;
     }
   }
 
   &__img {
     width: 340px;
     height: 346px;
+
+    &--denied {
+      width: 320px;
+      height: 379px;
+    }
   }
 }

@@ -1,0 +1,32 @@
+.drop-down {
+  position: relative;
+  display: inline-block;
+
+  &:hover .drop-down__wrapper {
+    display: block;
+  }
+
+  &__wrapper {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: $snow2;
+    border-radius: 15px;
+  }
+
+  &__btn {
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background-color: transparent;
+    font-family: $ff-main;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: $nero;
+    padding: 10px 16px;
+  }
+}
